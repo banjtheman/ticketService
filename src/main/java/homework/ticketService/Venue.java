@@ -169,8 +169,6 @@ public class Venue {
 
 	public String confirmSeat(int levelId, int rowId, int seatId, String customerEmail) {
 		return venueData.get(levelId).confirmSeat(rowId, seatId, customerEmail);
-		// TODO Auto-generated method stub
-
 	}
 
 }

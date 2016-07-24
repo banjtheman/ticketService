@@ -60,10 +60,10 @@ public class App {
 		Optional<Integer> three = Optional.of(3);
 		Optional<Integer> four = Optional.of(4);
 
-		int num;
-		ArrayList<SeatHold> mySeats = null;
-		String myEmail = "";
-		Scanner scanner = new Scanner(System.in);
+		int num; //input command selectec
+		ArrayList<SeatHold> mySeats = null; //temp seats being held
+		String myEmail = ""; //temp email for held seats
+		Scanner scanner = new Scanner(System.in);  //scanner to read inputs
 		printCommands();
 
 		while (true) {
@@ -166,21 +166,21 @@ public class App {
 					continue;
 				}
 
-				// Check inputs
+				// Check for valid min and max values
 				if (minValue > maxValue && maxValue != 0) {
 					System.out.println("Invalid min/max");
 					printCommands();
 					continue;
 				}
 
-				// Check inputs
+				// Check for postive numbers
 				if (minValue < 0 || maxValue < 0) {
 					System.out.println("Min and max must between 0 and 4");
 					printCommands();
 					continue;
 				}
 
-				// Check inputs
+				// Check for valid seat input
 				if (numSeats < 1) {
 					System.out.println("Must enter at least 1 seat");
 					printCommands();

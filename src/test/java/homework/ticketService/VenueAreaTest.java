@@ -4,7 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
+/**
+ * 
+ * @author banjt
+ *
+ * This class tests the VenueArea class functions that deal with interacting with seats to ensure each path has the desired outcome
+ */
 public class VenueAreaTest  {
 
 	VenueArea simple;

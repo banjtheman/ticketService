@@ -7,7 +7,13 @@ import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
-
+/**
+ * 
+ * @author banjt
+ *
+ * This class tests the Concierge interface methods to ensure that each path has the desired outcome
+ *
+ */
 public class ConciergeTest {
 
 	Venue concertHall;

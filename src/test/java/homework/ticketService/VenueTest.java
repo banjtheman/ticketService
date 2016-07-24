@@ -7,7 +7,12 @@ import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
-
+/**
+ * 
+ * @author banjt
+ *
+ * This class tests the Venue class functions that deal with interacting with seats, to ensure the desired outcome is reached for each path.
+ */
 public class VenueTest extends Venue {
 	Venue concertHall;
 	// Venue levels

@@ -12,8 +12,6 @@ import java.util.TimerTask;
  * Concierge class implements the TicketService to allow for controlling interactions between the venue and the user
  * It can be though of as the controller in the MVC framework as it sends data back to the view and grabs data from the model
  * 
- * 
- *
  */
 
 
@@ -21,8 +19,6 @@ public class Concierge implements TicketService {
 
 	private Venue venue;
 	private final int MAX_SECONDS = 10 * 1000;
-	private ArrayList<SeatHold> heldSeats;
-
 	public Concierge(Venue venue) {
 		super();
 		this.venue = venue;
@@ -42,8 +38,6 @@ public class Concierge implements TicketService {
 		}
 
 		final ArrayList<SeatHold> tempSeats = venue.getBestSeats(numSeats, minLevel, maxLevel, customerEmail);
-		heldSeats = tempSeats;
-
 		// set timer to hold seats
 		if (tempSeats != null && tempSeats.size()!=0) {
 
@@ -70,8 +64,6 @@ public class Concierge implements TicketService {
 						}
 
 					}
-					// clear temp held seats
-					heldSeats = null;
 
 				}
 			}, MAX_SECONDS);
@@ -82,8 +74,6 @@ public class Concierge implements TicketService {
 	}
 
 	public String reserveSeats(int levelId, int rowId, int seatId, String customerEmail) {
-		// TODO Auto-generated method stub
-
 		return venue.confirmSeat(levelId, rowId, seatId, customerEmail);
 	}
 

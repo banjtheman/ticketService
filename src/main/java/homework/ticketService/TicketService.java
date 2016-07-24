@@ -34,8 +34,12 @@ public interface TicketService {
 	/**
 	 * Commit seats held for a specific customer
 	 *
-	 * @param seatHoldId
-	 *            the seat hold identifier
+	 * @param levelId
+	 *            the venue level identifier
+	 * @param rowId
+	 *            the row identifier        
+	 * @param seatId
+	 *            the seat identifier               
 	 * @param customerEmail
 	 *            the email address of the customer to which the seat hold is
 	 *            assigned
