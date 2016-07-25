@@ -90,5 +90,4 @@ public class VenueAreaTest  {
 		String confirmString = main.confirmSeat(0, 0, email);
 		assertNull(confirmString);
 	}
-
 }

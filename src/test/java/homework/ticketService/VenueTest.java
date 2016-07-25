@@ -36,9 +36,7 @@ public class VenueTest extends Venue {
 		// add rows to Venue
 		concertHall.addRow(simple);
 		concertHall.addRow(main);
-		concertHall.addRow(back);
-
-		
+		concertHall.addRow(back);		
 	}
 
 	@Test
@@ -54,8 +52,7 @@ public class VenueTest extends Venue {
 		assertEquals(totalSeats,25);
 		totalSeats = concertHall.totalFreeSeats(three);
 		//25 in back
-		assertEquals(totalSeats,25);
-		
+		assertEquals(totalSeats,25);	
 	}
 
 	@Test
@@ -71,8 +68,7 @@ public class VenueTest extends Venue {
 		//Should only get seats on row 2
 		for (SeatHold seat: heldSeats){
 			assertEquals(seat.getLevelId(),2);
-		}
-		
+		}	
 	}
 	
 	@Test
@@ -81,8 +77,7 @@ public class VenueTest extends Venue {
 		//Should only get seats between row 2 and 3
 		for (SeatHold seat: heldSeats){
 			assertNotEquals(seat.getLevelId(),1);
-		}
-		
+		}		
 	}
 	
 	@Test
@@ -91,8 +86,7 @@ public class VenueTest extends Venue {
 		//Should only get seats in level 1
 		for (SeatHold seat: heldSeats){
 			assertEquals(seat.getLevelId(),1);
-		}
-		
+		}	
 	}
 
 	@Test
@@ -132,7 +126,6 @@ public class VenueTest extends Venue {
 		String confirmString = concertHall.confirmSeat(1, 0, 0, email);
 		String correctString= email+"-100";
 		assertEquals(confirmString,correctString);
-
 	}
 	
 	@Test
@@ -140,7 +133,5 @@ public class VenueTest extends Venue {
 		//Get seat, without confirming, test to see if confirm string is null
 		String confirmString = concertHall.confirmSeat(1, 0, 0, email);
 		assertNull(confirmString);
-
 	}
-
 }

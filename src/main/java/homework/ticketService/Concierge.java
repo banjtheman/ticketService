@@ -62,19 +62,14 @@ public class Concierge implements TicketService {
 									+ " has not been taken in time limit setting to free");
 							venue.freeSeat(levelId, rowId, seatId);
 						}
-
 					}
-
 				}
 			}, MAX_SECONDS);
-
 		}
-
 		return tempSeats;
 	}
 
 	public String reserveSeats(int levelId, int rowId, int seatId, String customerEmail) {
 		return venue.confirmSeat(levelId, rowId, seatId, customerEmail);
 	}
-
 }

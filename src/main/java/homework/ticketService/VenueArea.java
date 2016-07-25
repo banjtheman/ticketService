@@ -50,10 +50,8 @@ public class VenueArea {
 				SeatHold temp = new SeatHold(r, s, this.levelName, this.levelId, false, false, null);
 				rowSeats.add(temp);
 			}
-
 			// Add the list of seats mapped to the row
 			seats.put(r, rowSeats);
-
 		}
 
 	}
@@ -111,9 +109,7 @@ public class VenueArea {
 	}
 
 	public boolean isSeatFree(int rowId, int seatId) {
-
 		return seats.get(rowId).get(seatId).isTaken();
-
 	}
 
 	public SeatHold getBestSeat() {
@@ -134,7 +130,6 @@ public class VenueArea {
 					seat.setHeld(true);
 					this.freeSeats -= 1;
 					seats.get(key).get(seat.getSeatId()).setHeld(true);
-
 					return seat;
 				}
 			}

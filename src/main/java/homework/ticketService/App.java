@@ -26,7 +26,6 @@ public class App {
 
 	//print the standard commands
 	public static void printCommands() {
-
 		System.out.println("Enter 1 for total number of seats");
 		System.out.println("Enter 2 to find and hold the best seats");
 		System.out.println("Enter 3 to reserve and commit to seats");
@@ -223,13 +222,10 @@ public class App {
 					if (status!=null){
 						System.out.println("Confirmation ID: "+status);
 					}
-					
-
 				}
 				//Clear the local cache of held seats and email
 				mySeats = null;
 				myEmail = null;
-
 			}
 
 			if (num == -1) {
@@ -237,10 +233,7 @@ public class App {
 				scanner.close();
 				System.exit(1);
 			}
-
 			printCommands();
-
 		}
-
 	}
 }

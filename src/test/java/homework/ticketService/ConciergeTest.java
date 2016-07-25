@@ -54,9 +54,7 @@ public class ConciergeTest {
 		assertEquals(totalSeats,25);
 		totalSeats = concierge.numSeatsAvailable(three);
 		//25 in back
-		assertEquals(totalSeats,25);
-		
-		
+		assertEquals(totalSeats,25);		
 	}
 
 
@@ -74,8 +72,7 @@ public class ConciergeTest {
 		//Should only get seats on row 2
 		for (SeatHold seat: heldSeats){
 			assertEquals(seat.getLevelId(),2);
-		}
-		
+		}		
 	}
 	
 	@Test
@@ -84,8 +81,7 @@ public class ConciergeTest {
 		//Should only get seats between row 2 and 3
 		for (SeatHold seat: heldSeats){
 			assertNotEquals(seat.getLevelId(),1);
-		}
-		
+		}	
 	}
 	
 	@Test
@@ -94,8 +90,7 @@ public class ConciergeTest {
 		//Should only get seats in level 1
 		for (SeatHold seat: heldSeats){
 			assertEquals(seat.getLevelId(),1);
-		}
-		
+		}		
 	}
 
 
@@ -107,7 +102,6 @@ public class ConciergeTest {
 		String confirmString = concierge.reserveSeats(1, 0, 0, email);
 		String correctString= email+"-100";
 		assertEquals(confirmString,correctString);
-
 	}
 	
 	@Test
@@ -115,7 +109,5 @@ public class ConciergeTest {
 		//Get seat, without confirming, test to see if confirm string is null
 		String confirmString = concierge.reserveSeats(1, 0, 0, email);
 		assertNull(confirmString);
-
 	}
-
 }
